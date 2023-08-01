@@ -14,10 +14,10 @@ export default function Home() {
   const router = useRouter();
 
   return (
-    <SafeAreaView stlye={{ flex: 1, backgroundcolor: COLORS.lightWhite }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.lightWhite }}>
       <Stack.Screen
         options={{
-          headerStyle: { backgroundcolor: COLORS.lightWhite },
+          headerStyle: { backgroundColor: COLORS.lightWhite },
           headerShadowVisible: false,
           headerLeft: () => (
             <ScreenHeaderBtn iconUrl={icons.menu} dimension="60%" />
