@@ -13,7 +13,7 @@ import {
 export default function Home() {
   const router = useRouter();
 
-  // 30 mins in
+  // 30 mins in, will complete and review
 
   return (
     <SafeAreaView stlye={{ flex: 1, backgroundcolor: COLORS.lightWhite }}>
