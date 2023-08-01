@@ -13,8 +13,6 @@ import {
 export default function Home() {
   const router = useRouter();
 
-  // 30 mins in, will complete and review
-
   return (
     <SafeAreaView stlye={{ flex: 1, backgroundcolor: COLORS.lightWhite }}>
       <Stack.Screen
@@ -30,6 +28,14 @@ export default function Home() {
           headerTitle: "",
         }}
       />
+
+      <ScrollView showsVerticalScrollIndicator={false}>
+        <View style={{ flex: 1, padding: SIZES.medium }}>
+          <Welcome />
+          <Popularjobs />
+          <Nearbyjobs />
+        </View>
+      </ScrollView>
     </SafeAreaView>
   );
 }
