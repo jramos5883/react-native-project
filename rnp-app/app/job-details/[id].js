@@ -17,7 +17,11 @@ export default function JobDetails() {
     const [refreshing, setRefreshing] = useState(false);
     const [activeTab, setActiveTab] = useState(tabs[0]);
 
-    const onRefresh = () => {}
+    const onRefresh = useCallback(() => {
+        setRefreshing(true);
+        refetch();
+        setRefreshing(false);
+    }, [])
 
     const displayTabContent = () => {
         switch(activeTab) {
@@ -88,6 +92,7 @@ export default function JobDetails() {
                     </View>
                 )}
            </ScrollView>
+           <JobFooter url={data[0]?.job_google_link ?? 'http://careers.gogole.com/jobs/results'}/>
            </>
         </SafeAreaView>
     )
